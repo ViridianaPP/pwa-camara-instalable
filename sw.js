@@ -1,6 +1,6 @@
 'use strict';
 
-const NOMBRE_CACHE = 'pwa-camara-instalable-v1';
+const NOMBRE_CACHE = 'pwa-camara-instalable-v2';
 const ARCHIVOS_PRECACHEADOS = [
   './',
   './index.html',
