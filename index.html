@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Inspección visual con cámara local y acceso consciente a permisos.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="InspecciónPWA">
+  <title>Inspección Visual PWA</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="contenedor">
+    <header class="cabecera">
+      <h1>Inspección Visual PWA</h1>
+      <p class="subtitulo">Vista previa local de cámara con consentimiento consciente</p>
+    </header>
+
+    <main>
+      <section id="instrucciones-ios" class="tarjeta aviso" hidden>
+        <h2>Instalar en iPhone</h2>
+        <p>Para instalar en iPhone, pulsa el icono Compartir y selecciona "Agregar a inicio".</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Instalar la aplicación</h2>
+        <p>Si tu navegador lo permite, puedes agregar esta PWA a la pantalla de inicio.</p>
+        <button id="btn-instalar" type="button" hidden>Instalar app</button>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Acceso a la cámara</h2>
+        <p id="estado" role="status" aria-live="polite">La cámara está apagada.</p>
+
+        <div id="aviso-permiso" class="aviso" hidden>
+          <h3>Antes de encender la cámara</h3>
+          <p>Esta aplicación requiere acceso a tu cámara únicamente para mostrar una vista previa local en pantalla. Ninguna imagen se envía a servidores externos.</p>
+          <p>Se encenderá inicialmente la cámara trasera; podrás cambiar a la frontal cuando lo desees.</p>
+          <button id="btn-confirmar-permiso" type="button">Aceptar y encender cámara</button>
+        </div>
+
+        <button id="btn-preparar-camara" type="button">Solicitar acceso a cámara</button>
+
+        <video id="visor-camara" autoplay playsinline muted></video>
+
+        <div class="controles">
+          <button id="btn-alternar-camara" type="button" disabled>Cambiar cámara</button>
+          <button id="btn-apagar-camara" type="button" disabled>Apagar cámara</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

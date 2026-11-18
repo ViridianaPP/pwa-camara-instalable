@@ -1,0 +1,130 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0f172a, #1e293b);
+}
+
+.contenedor {
+  width: min(100% - 2rem, 42rem);
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+}
+
+.cabecera {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 0.35rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.subtitulo,
+p {
+  color: #aab8cd;
+  line-height: 1.5;
+}
+
+.tarjeta {
+  background: #172033;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tarjeta.aviso {
+  border-color: #f59e0b;
+  background: #2a2317;
+}
+
+.aviso {
+  border: 1px solid #f59e0b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.aviso p {
+  color: #fde68a;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 0.6rem;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  color: #0f172a;
+  background: #38bdf8;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+button:hover:not(:disabled) {
+  background: #7dd3fc;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+#btn-instalar,
+#btn-confirmar-permiso {
+  background: #4ade80;
+}
+
+#btn-instalar:hover,
+#btn-confirmar-permiso:hover {
+  background: #86efac;
+}
+
+#visor-camara {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-height: 60vh;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  background: #020617;
+  object-fit: cover;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.controles button {
+  flex: 1 1 12rem;
+}
